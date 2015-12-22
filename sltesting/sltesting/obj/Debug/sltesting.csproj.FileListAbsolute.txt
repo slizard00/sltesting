@@ -1,0 +1,5 @@
+C:\Users\slagria\Documents\GitHub\sltesting\sltesting\sltesting\bin\sltesting.dll
+C:\Users\slagria\Documents\GitHub\sltesting\sltesting\sltesting\bin\sltesting.pdb
+C:\Users\slagria\Documents\GitHub\sltesting\sltesting\sltesting\obj\Debug\sltesting.csprojResolveAssemblyReference.cache
+C:\Users\slagria\Documents\GitHub\sltesting\sltesting\sltesting\obj\Debug\sltesting.dll
+C:\Users\slagria\Documents\GitHub\sltesting\sltesting\sltesting\obj\Debug\sltesting.pdb
