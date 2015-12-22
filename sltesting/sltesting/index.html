@@ -5,83 +5,53 @@
     <script type="text/javascript" src="Scripts/jquery-2.1.4.min.js"> </script>
     <script type="text/javascript" src="sketch.min.js"></script>
     <script type="text/javascript" src="sltesting.js"></script>
-    
+
 
     <style>
-    
-          
-          body { font-family: "Open Sans", sans-serif; color: #444; }
-      h1, h2, h3, h4 { font-family: Yellowtail; font-weight: normal; color: #06a; }
+        .tools {
+            margin-bottom: 10px;
+        }
 
-      #wrapper { width: 800px; margin: 0 auto; }
+            .tools a {
+                border: 1px solid black;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 10px;
+                vertical-align: middle;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                color: black;
+                font-weight: bold;
+            }
 
-      header { text-align: center; }
-      header h1 { font-size: 46px; text-align: center; margin: 15px 10px; }
-
-      article h1 { font-size: 26px; margin: 0 0 15px; }
-
-      article canvas {
-        width: 800px;
-        height: 300px;
-        border: 1px solid #ccc;
-      }
-
-      pre.source {
-        background: #e5eeee;
-        padding: 10px 20px;
-        width: 760px;
-        overflow-x: auto;
-        border: 1px solid #acc;
-      }
-
-      code { background: #cff; }
-
-      
-    .tools { margin-bottom: 10px; }
-    
-    .tools a {
-        border: 1px solid black; height: 30px; line-height: 30px; padding: 0 10px; vertical-align: middle; text-align: center; text-decoration: none; display: inline-block; color: black; font-weight: bold;
-      }
-</style>
+        .center-div {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 500px;
+            height: 650px;  
+            /*border-style: dashed;          
+            border-radius: 3px;*/
+        }
+        .canvas {
+            background:white;
+            border-style:dashed;
+            border-radius: 3px;
+        }
+    </style>
 
 </head>
 <body>
 
-    <div id="colors_demo">
-        <div style="margin-bottom: 10px;">
-            Sign your name using your mouse:
-        </div>
+    <div id="colors_demo" class="center-div">
         <div class="tools">
             <a href="#colors_sketch" onclick="$('#colors_sketch').clear();">Clear</a>
         </div>
-        <canvas id="colors_sketch" width="500" style="background: white;" height="200"></canvas>
-
-
-        <script type="text/javascript">
-
-            $(function () {
-                $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function () {
-                    $('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
-                });
-                $.each([3, 5, 10, 15], function () {
-                    $('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
-                });
-
-                var sketch = null;
-
-                if (sketch == null) {
-                    console.log('Setting Sketch');
-                    sketch = $('#colors_sketch').sketch({ defaultColor: "#000" });
-                } else {
-                    console.log("NEED TO CLEAR.");
-                    console.log(sketch);
-                    $('#colors_sketch').clear();
-                }
-
-
-            });
-
-        </script>
+        <canvas id="colors_sketch" width="400" style="background: white; border-style:dotted;" height="550"></canvas>
     </div>
 </body>
 </html>
