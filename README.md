@@ -1,5 +1,5 @@
 # sltesting
-adding simple canvas project
+
 
 this is a simple HTML Page that has a canvas for Freehand drawing.
 
